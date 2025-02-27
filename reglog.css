@@ -1,0 +1,131 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2fbf6b; 
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    padding: 1rem;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    align-self: center;
+    text-align: center;
+}
+
+
+#create-account{
+    color: #007bff; /* Blue Accent */
+    font-size: 1.5rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    margin-bottom: 1rem;
+    color: #007bff; /* Blue Accent */
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    background-color:rgb(47, 191, 107);
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #1a452f; /* Blue Button */
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+
+button:hover {
+    background: #0056b3; /* Darker Blue */
+}
+
+.contaner{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0.4rem;
+   
+    
+
+}
+
+
+/* Links */
+p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #458763;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* list item styling */
+li {
+    padding: 10px;
+    background: #2fbf6b;
+    border-bottom: 1px solid #ddd;
+}
+
+span {
+    color: #51e792;
+    cursor: pointer;
+}
+
+.toggle-password  {
+    color: darkolivegreen;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-top: -5rem;
+}
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 100%;
+    }
+}
+
+/* new gradient */
