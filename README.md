@@ -15,7 +15,7 @@ This is a group project of batch-B Web Development students at New-Horizons Comp
 5. **Local Recycling Points**: A search feature that helps users find nearby recycling points, making it easier to dispose of recyclable materials responsibly.
 
 ### Technical Details
-- **Frontend**: The frontend is built using HTML, CSS, and JavaScript, providing a clean and intuitive user interface.
+- **Frontend**: The frontend was built using HTML, CSS, and JavaScript, providing a clean and intuitive user interface.
 - **Backend**: Firebase Authentication is used for secure user authentication, ensuring that user data is protected.
 - **Environment Variables**: Sensitive information such as Firebase configuration is managed using environment variables, enhancing security and maintainability.
 - **Local Storage**: User information is stored in the browser's local storage to maintain session state and provide a personalized experience.
