@@ -72,5 +72,3 @@ We welcome contributions from the community! If you would like to contribute to 
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ---
-
-This description provides a comprehensive overview of the ResycLink project, highlighting its features, technical details, and code functionality. It also includes instructions for getting started and contributing to the project.
