@@ -2,9 +2,9 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.3.1/firebas
 import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js';
 import { firebaseConfig } from './config.js';
 import dotenv from 'dotenv';
+import CryptoJS from 'crypto-js';
 
 dotenv.config();
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -22,11 +22,10 @@ if (regButton) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        localStorage.setItem('user', JSON.stringify({
-          uid: user.uid, email: user.email
-        }));
+        const userData = JSON.stringify({ uid: user.uid, email: user.email });
+        const encryptedUserData = CryptoJS.AES.encrypt(userData, process.env.SECRET_KEY).toString();
 
-      
+        localStorage.setItem('user', encryptedUserData);
 
         setTimeout(() => {
           alert(`Welcome, ${user.email} was successfully registered. Click "OK" to Continue...`);
