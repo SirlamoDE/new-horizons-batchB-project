@@ -1,0 +1,5 @@
+# left out environment variables
+.env
+
+# left out 
+firebase-debug.log
