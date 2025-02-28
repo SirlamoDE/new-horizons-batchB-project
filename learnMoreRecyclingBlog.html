@@ -1,163 +1,508 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Truth About Recycling: Common Myths and Facts You Should Know</title>
-    <link rel="stylesheet" href="blog.css">
-     <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-green: #2CD889;
+            --dark-green: #0C7148;
+            --light-green: #F2FCE2;
+            --medium-green: #60E99C;
+            --main-gray: #6E6E73;
+            --dark-gray: #333333;
+            --light-gray: #F8F8F8;
+            --border-gray: #E5E5E5;
+            --heading-color: #1D1D1F;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            color: #333;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background-color: #FAFAFA;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background-color: var(--main-green);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--light-green);
         }
 
         .container {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
         }
 
-        h1, h2, h3 {
-            font-weight: 600;
-            color: #2c3e50;
+        .hero-image {
+            height: 300px;
+            border-radius: 8px;
+            background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            margin: -40px -40px 30px -40px;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: flex-end;
+            padding: 30px;
+        }
+
+        .hero-title {
+            color: white;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 700;
+            color: var(--heading-color);
+            line-height: 1.3;
         }
 
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
         h2 {
-            font-size: 1.5em;
-            margin-top: 20px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+            font-size: 1.8em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--main-green);
         }
 
         h3 {
-            font-size: 1.2em;
-            margin-top: 15px;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 15px;
         }
 
         p {
-            margin-bottom: 10px;
+            margin-bottom: 18px;
+        }
+
+        .intro {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--main-gray);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-gray);
         }
 
         ul {
-            list-style-type: disc;
-            margin-left: 20px;
+            list-style-type: none;
+            margin: 0 0 20px 0;
+        }
+
+        ul li {
+            padding-left: 25px;
+            position: relative;
             margin-bottom: 10px;
         }
 
-        .author-info {
-            margin-top: 20px;
-            text-align: right;
-            font-size: 0.9em;
-            color: #777;
+        ul li:before {
+            content: '♻️';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            font-size: 14px;
         }
 
-        .author-info a {
-            color: #007bff;
+        .author-info {
+            margin-top: 40px;
+            background-color: var(--light-green);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: var(--main-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .author-details {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--dark-green);
+            margin-bottom: 5px;
+        }
+
+        .author-bio {
+            font-size: 0.9em;
+            color: var(--main-gray);
+        }
+
+        .author-contact {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .author-contact a {
+            color: var(--main-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .author-contact a:hover {
+            color: var(--dark-green);
+            text-decoration: underline;
         }
 
         .date {
-            margin-top: 5px;
+            color: var(--main-gray);
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            display: block;
         }
 
         .myth-fact {
-            margin-bottom: 15px; /* Space between myth/fact sections */
-            border-bottom: 1px solid #eee; /* Light separator line */
-            padding-bottom: 10px;
+            background-color: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            border-left: 4px solid var(--main-green);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .myth {
-            font-style: italic;
-            color: #555;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #E57373;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .myth:before {
+            content: '✕';
+            display: inline-block;
+            margin-right: 10px;
+            color: #E57373;
+            font-weight: bold;
         }
 
         .fact {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--dark-green);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .fact:before {
+            content: '✓';
+            display: inline-block;
+            margin-right: 10px;
+            color: var(--main-green);
             font-weight: bold;
         }
 
         .tags {
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #777;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .tags a {
-            color: #007bff;
-            margin-right: 5px; /* Space between tags */
+            display: inline-block;
+            background-color: var(--light-green);
+            color: var(--dark-green);
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .tags a:hover {
+            background-color: var(--main-green);
+            color: white;
+        }
+
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--main-green);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top-btn:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-3px);
+        }
+
+        footer {
+            background-color: var(--heading-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--main-green);
+        }
+
+        .copyright {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .hero-image {
+                height: 200px;
+                margin: -20px -20px 20px -20px;
+            }
+
+            .hero-title {
+                font-size: 1.8em;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>The Truth About Recycling: Common Myths and Facts You Should Know</h1>
 
-        <p>Recycling is an essential practice for reducing waste, conserving natural resources, and protecting the environment. However, despite its importance, there are many misconceptions surrounding recycling that prevent people from participating effectively. In this post, we will debunk some of the most common recycling myths and share the facts you need to know to recycle correctly.</p>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">ResycLink</a>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hero-image">
+            <div class="hero-overlay">
+                <h1 class="hero-title">The Truth About Recycling: Common Myths and Facts You Should Know</h1>
+            </div>
+        </div>
+
+        <time class="date">Published: November 15, 2023</time>
+
+        <p class="intro">Recycling is an essential practice for reducing waste, conserving natural resources, and
+            protecting the environment. However, despite its importance, there are many misconceptions surrounding
+            recycling that prevent people from participating effectively. In this post, we will debunk some of the most
+            common recycling myths and share the facts you need to know to recycle correctly.</p>
 
         <div class="myth-fact">
             <p class="myth">Myth 1: Everything with a Recycling Symbol Can Be Recycled</p>
             <p class="fact">Fact: Not All Items with the Recycling Symbol Are Recyclable</p>
-            <p>Many people assume that if a product has the recycling symbol (♻), it can go into the recycling bin. However, this is not always true. The number inside the symbol represents the type of plastic, but not all recycling centers accept all types. Plastics #1 and #2 (PET and HDPE) are widely accepted. Plastics #3-7 (such as PVC and polystyrene) are less commonly recycled. Check with your local recycling center.</p>
+            <p>Many people assume that if a product has the recycling symbol (♻), it can go into the recycling bin.
+                However, this is not always true. The number inside the symbol represents the type of plastic, but not
+                all recycling centers accept all types. Plastics #1 and #2 (PET and HDPE) are widely accepted. Plastics
+                #3-7 (such as PVC and polystyrene) are less commonly recycled. Check with your local recycling center.
+            </p>
         </div>
 
         <div class="myth-fact">
-            <p class="myth">Myth 2: Recycling Doesn’t Make a Difference</p>
+            <p class="myth">Myth 2: Recycling Doesn't Make a Difference</p>
             <p class="fact">Fact: Recycling Saves Energy, Reduces Pollution, and Conserves Resources</p>
-            <p>Recycling significantly reduces environmental damage. It reduces energy consumption, conserves natural resources, and cuts down on landfill waste. Recycling plays a major role in sustainability and waste management.</p>
+            <p>Recycling significantly reduces environmental damage. It reduces energy consumption, conserves natural
+                resources, and cuts down on landfill waste. Recycling plays a major role in sustainability and waste
+                management.</p>
         </div>
 
         <div class="myth-fact">
             <p class="myth">Myth 3: You Must Wash All Containers Before Recycling</p>
-            <p class="fact">Fact: Rinsing Helps, but Perfect Cleanliness Isn’t Necessary</p>
-            <p>A quick rinse to remove leftover food or liquids is usually enough. Scraping food residue and using leftover dishwater can help. Avoid heavily soiled items like greasy pizza boxes.</p>
+            <p class="fact">Fact: Rinsing Helps, but Perfect Cleanliness Isn't Necessary</p>
+            <p>A quick rinse to remove leftover food or liquids is usually enough. Scraping food residue and using
+                leftover dishwater can help. Avoid heavily soiled items like greasy pizza boxes.</p>
         </div>
 
         <div class="myth-fact">
             <p class="myth">Myth 4: Glass and Plastic Always Get Recycled</p>
             <p class="fact">Fact: Many Glass and Plastic Items End Up in Landfills</p>
-            <p>Not all glass and plastic are processed due to cost and facility limitations, lack of local recycling infrastructure, market demand, and contamination. Sort your recyclables correctly.</p>
+            <p>Not all glass and plastic are processed due to cost and facility limitations, lack of local recycling
+                infrastructure, market demand, and contamination. Sort your recyclables correctly.</p>
         </div>
 
         <div class="myth-fact">
-            <p class="myth">Myth 5: Biodegradable Items Don’t Need to Be Recycled</p>
+            <p class="myth">Myth 5: Biodegradable Items Don't Need to Be Recycled</p>
             <p class="fact">Fact: Biodegradable Items Can Still Pollute If Not Properly Disposed Of</p>
-            <p>Landfills lack the oxygen for proper decomposition. Biodegradable items can release methane. Consider composting instead.</p>
+            <p>Landfills lack the oxygen for proper decomposition. Biodegradable items can release methane. Consider
+                composting instead.</p>
         </div>
 
         <div class="myth-fact">
-            <p class="myth">Myth 6: One Person’s Recycling Efforts Don’t Matter</p>
+            <p class="myth">Myth 6: One Person's Recycling Efforts Don't Matter</p>
             <p class="fact">Fact: Every Effort Counts Toward a Sustainable Future</p>
-            <p>Collective efforts lead to significant change. Recycling one ton of paper saves 17 trees and 7,000 gallons of water. Recycling one glass bottle saves enough energy to power a 100-watt light bulb for four hours.</p>
+            <p>Collective efforts lead to significant change. Recycling one ton of paper saves 17 trees and 7,000
+                gallons of water. Recycling one glass bottle saves enough energy to power a 100-watt light bulb for four
+                hours.</p>
         </div>
 
         <h2>Tips for Effective Recycling</h2>
         <ul>
             <li>Check your local recycling rules.</li>
-            <li>Avoid “wishcycling.”</li>
+            <li>Avoid "wishcycling."</li>
             <li>Keep it dry.</li>
             <li>Reduce and reuse first.</li>
             <li>Advocate for better recycling policies.</li>
         </ul>
 
-        <p>Recycling is crucial. By understanding the facts, we can ensure more waste gets properly processed. Every small effort helps.</p>
+        <p>Recycling is crucial. By understanding the facts, we can ensure more waste gets properly processed. Every
+            small effort helps.</p>
 
         <div class="author-info">
-            <span class="author">Written by: Angela Chinweike</span><br>
-            <span class="date">Published: </span><br>
-            <a href="mailto:angelachinweike@gmail.com">Contact: angelachinweike@gmail.com</a><br>
-            Phone: +234 8086 098 105
+            <div class="author-avatar">AC</div>
+            <div class="author-details">
+                <div class="author-name">Angela Chinweike</div>
+                <div class="author-bio">Environmental Specialist and Waste Management Consultant</div>
+                <div class="author-contact">
+                    <a href="mailto:angelachinweike@gmail.com">Email</a>
+                    <span>|</span>
+                    <a href="tel:+2348086098105">+234 8086 098 105</a>
+                </div>
+            </div>
         </div>
 
         <div class="tags">
-            Tags:
             <a href="#">Recycling Myths</a>
             <a href="#">Recycling Facts</a>
             <a href="#">Sustainable Living</a>
@@ -165,12 +510,45 @@
             <a href="#">Waste Management</a>
             <a href="#">Reduce Reuse Recycle</a>
             <a href="#">Go Green</a>
-            <a href="#">Recycling Tips</a>
             <a href="#">Environmental Awareness</a>
             <a href="#">Zero Waste</a>
         </div>
     </div>
-    <button id="scrollToTop" class="scroll-top-btn" title="Back to Top">⬆ Scroll to Top</button>
-    <script src="blog.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p class="copyright">© 2023 ResycLink. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollToTop" class="scroll-top-btn" title="Back to Top">↑</button>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollBtn = document.getElementById('scrollToTop');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
+
 </html>
