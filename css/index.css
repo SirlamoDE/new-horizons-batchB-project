@@ -143,6 +143,7 @@ nav ul li a:hover:after {
   align-items: center;
   justify-content: space-between;
   padding: 3rem 5%;
+  padding-left:8rem;
   gap: 4rem;
   background-color: var(--neutral);
 }
@@ -190,6 +191,7 @@ nav ul li a:hover:after {
 .sign-up a {
   text-decoration: none;
   color: inherit;
+  
 }
 
 .learn-more:hover {
@@ -262,12 +264,13 @@ nav ul li a:hover:after {
 .hero2:after {
   content: '';
   position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: rgba(50, 182, 14, 0.258);
   border-radius: 50%;
-  bottom: -50px;
-  left: -50px;
+  bottom: -15px;
+  left: -20px;
 }
 
 .hero2-container {
@@ -275,7 +278,7 @@ nav ul li a:hover:after {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero-text {
